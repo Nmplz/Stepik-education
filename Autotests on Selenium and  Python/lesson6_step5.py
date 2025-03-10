@@ -1,12 +1,17 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import math
 import time
 
-link = "http://suninjuly.github.io/simple_form_find_task.html"
+link = "https://suninjuly.github.io/find_link_text"
 
 try:
     browser = webdriver.Chrome()
     browser.get(link)
+    link = browser.find_element(
+        By.LINK_TEXT, str(math.ceil(math.pow(math.pi, math.e) * 10000))
+    )
+    link.click()
 
     input1 = browser.find_element(By.TAG_NAME, "input")
     input1.send_keys("Ivan")
@@ -20,9 +25,5 @@ try:
     button.click()
 
 finally:
-    # успеваем скопировать код за 30 секунд
     time.sleep(30)
-    # закрываем браузер после всех манипуляций
     browser.quit()
-
-# не забываем оставить пустую строку в конце файла
