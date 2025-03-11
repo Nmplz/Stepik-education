@@ -2,6 +2,11 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
+
+#.find_element
+#.send_keys
+#.click()
+
 link = "https://suninjuly.github.io/registration2.html"
 
 try:
