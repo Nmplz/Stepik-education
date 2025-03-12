@@ -4,6 +4,10 @@ from selenium.webdriver.support.ui import Select
 import time
 import os
 
+# .find_element
+# .send_keys
+# os.path.abspath
+# os.path.join
 
 link = "https://suninjuly.github.io/file_input.html"
 # получаем путь к директории текущего исполняемого
