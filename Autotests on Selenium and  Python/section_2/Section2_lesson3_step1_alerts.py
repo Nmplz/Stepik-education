@@ -4,14 +4,16 @@ from selenium.webdriver.support.ui import Select
 import time
 
 
-#
+# Alert
+# Confirm
+# Prompt
 
 
 
 try:
     browser = webdriver.Chrome()
 
-    #ALLERT
+    #ALERT
     browser.execute_script("alert('Hello!');") # Вызываем алерт
     alert = browser.switch_to.alert            # Переключаемся на окно с алертом
     time.sleep(2)
