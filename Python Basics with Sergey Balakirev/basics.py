@@ -528,4 +528,216 @@ v = input()
 print(any(v in s for s in t))
 
 
-# 81 УСЛОВНЫЕ ОПЕРАТОРЫ.
+# 81
+# put your python code here
+print(max(map(float, input().split())))
+
+
+# 82
+
+s = input().lower()
+print("ДА" if s == s[::-1] else "НЕТ")
+
+
+# 83
+m, n = map(int, input().split())
+if m % n == 0:
+    print(m // n)
+else:
+    print(f"{m} на {n} нацело не делится")
+
+# 84
+
+a, b, c = input().split()
+print("ДА" if (int(a) ** 2 + int(b) ** 2 == int(c) ** 2) else "НЕТ")
+
+
+# 85
+s = input()
+print("ДА" if s[-1] == "7" else "НЕТ")
+
+
+# 86
+i = input()
+print("ДА" if i.count("t") and i.count("h") and i.count("o") else "НЕТ")
+
+
+# 87
+# put your python code here
+cities = list(map(str, input().split()))
+
+if "Москва" in cities:
+    cities.remove("Москва")
+print(*cities)
+
+
+# 88
+a, b, c, d = map(int, input().split())
+
+print("ДА" if max(a, b) >= max(c, d) + 2 and min(a, b) >= min(c, d) + 2 else "НЕТ")
+
+
+# 89
+# put your python code here
+i = input()
+print(
+    "ДА"
+    if int(i[0]) + int(i[1]) + int(i[2]) == int(i[3]) + int(i[4]) + int(i[5])
+    else "НЕТ"
+)
+
+# 90
+i = float(input())
+print("green" if i % 5 < 4 else "red")
+
+# 91
+# put your python code here
+
+m = """1. Введение в Python
+2. Строки и списки
+3. Условные операторы
+4. Циклы
+5. Словари, кортежи и множества
+6. Выход"""
+
+i = input()
+if i in ("2345"):
+    start = m.find(i)
+    end = m.find(str(int(i) + 1))
+    print(m[start:end])
+elif i == "6":
+    print("6. Выход")
+else:
+    print("1. Введение в Python")
+
+
+# 92
+# put your python code here
+a, b, c = map(int, input().split())
+if a > b:
+    if b > c:
+        print(c)
+    else:
+        print(b)
+else:
+    if a > c:
+        print(c)
+    else:
+        print(a)
+
+
+# 93
+# put your python code here
+# 1) легкий вес – до 60 кг (включительно);
+# 2) первый полусредний вес – до 64 кг (включительно);
+# 3) полусредний вес – до 69 кг (включительно);
+# 4) остальные - более 69 кг.
+
+
+i = float(input())
+if i > 64:
+    if i > 69:
+        print(4)
+    else:
+        print(3)
+else:
+    if i <= 60:
+        print(1)
+    else:
+        print(2)
+
+
+# 94
+# put your python code here
+lst = [
+    "понедельник",
+    "вторник",
+    "среда",
+    "четверг",
+    "пятница",
+    "суббота",
+    "воскресенье",
+]
+print(lst[int(input()) - 1])
+
+
+# 95
+# put your python code here
+
+lst = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+print(lst[int(input()) - 1])
+
+
+# 96
+lst = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+m, d = map(int, input().split())  # month  day
+day_before = d - 1
+day_after = d + 1
+month_before = m
+month_after = m
+if d == 1:
+    day_before = lst[d - 1]
+    month_before = m - 1
+elif d == lst[m - 1]:
+    day_after = 1
+    month_after = m + 1
+print(f"{month_before:02}.{day_before:02} {month_after:02}.{day_after:02}")
+
+
+# 97
+# put your python code here
+days = [
+    "понедельник",
+    "вторник",
+    "среда",
+    "четверг",
+    "пятница",
+    "суббота",
+    "воскресенье",
+]
+k = int(input())
+print(days[(k % 7) - 1])
+
+
+# 98
+s = float(input())
+t = float(input())
+d = s if s > t else t
+print(d)
+
+
+# 99
+# put your python code here
+i = int(input())
+msg = "кратно 3" if not i % 3 else "не кратно 3"
+print(msg)
+
+
+# 100
+# put your python code here
+t = input().lower()
+msg = "палиндром" if t == t[::-1] else "не палиндром"
+
+print(msg)
+
+
+# 101
+# put your python code here
+print("False" if not int(input()) else "True")
+
+
+# 102
+# put your python code here
+s = int(input())
+print(0 if s == 59 else s + 1)
+
+
+# 103
+# put your python code here
+m = ["#до", "ре", "ми", "#фа", "соль", "ля", "си"]
+a, b, c = map(int, input().split())
+
+print(m[a - 1], m[b - 1], m[c - 1])
+
+
+# 104 ЦИКЛЫ
