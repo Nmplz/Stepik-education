@@ -1,10 +1,9 @@
-# Решения задач курсов на [Степике](https://stepik.org/)
-# Solutions to course problems on [Stepik](https://stepik.org/)
+# Решения задач курсов на [Степике](https://stepik.org/). Solutions to course problems on [Stepik](https://stepik.org/)
 
 
 
-## Курсы
-## Courses
+## Курсы (Courses)
+
 
 * [Добрый, добрый Python с Сергеем Балакиревым](https://stepik.org/course/100707/syllabus)
 * [Добрый, добрый Python ООП - обучающий курс от Сергея Балакирева](https://stepik.org/course/116336/syllabus)
