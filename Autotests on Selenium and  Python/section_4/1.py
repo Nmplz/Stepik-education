@@ -1,8 +1,10 @@
-n = 3
-list1 = []
+my_list = [[12, 221, 3], [41, 5, 633], [71, 8, 99]]
 
-for _ in range(n):
-    row = input().split()
-    list1.extend(row)
+maximum = my_list[0][0]
+minimum = my_list[0][0]
 
-print(list1)
+for row in my_list:
+    maximum = max(row)
+    minimum = min(row)
+
+print(maximum + minimum)
