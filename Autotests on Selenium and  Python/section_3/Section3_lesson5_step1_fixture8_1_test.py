@@ -2,6 +2,12 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+# multiple mark
+# @pytest.mark.smoke
+# @pytest.mark.win10
+# pytest -s -v -m "smoke or regression" test_fixture8.py
+# pytest -s -v -m "not smoke" test_fixture8.py
+
 link = "http://selenium1py.pythonanywhere.com/"
 
 
