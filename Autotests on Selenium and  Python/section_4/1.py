@@ -1,12 +1,12 @@
-my_list = [[12, 221, 3], [41, 5, 633], [71, 8, 99]]
+import json
 
-maximum = my_list[0][0]
-minimum = my_list[0][0]
+def load_credentials():
+    with open ('D:\stepic_Cred.json', 'r') as file:
+        credentials = json.load(file)
+        return credentials
+    
 
-for row in my_list:
-    if max(row) > maximum:
-        maximum = max(row)
-    if min(row) < minimum:
-        minimum = min(row)
 
-print(maximum + minimum)
+cred = load_credentials()
+login = cred['login_stepik']
+passwd = cred['password_stepik']
