@@ -2,6 +2,8 @@
 # from selenium import webdriver
 # from selenium.webdriver.common.by import By
 
+# # -v - выводит отчет более подробно
+# #-s - показывает в консоли выводы print'ов.
 
 # @pytest.fixture(scope="function")
 # def browser():
