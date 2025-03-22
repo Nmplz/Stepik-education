@@ -1,5 +1,6 @@
 import pytest
 from selenium.webdriver.common.by import By
+import time
 
 
 class TestMultipleLanguage:
@@ -11,7 +12,7 @@ class TestMultipleLanguage:
         )
 
         try:
-
+            time.sleep(30)
             add_to_busket_botton = browser.find_element(
                 By.CSS_SELECTOR, ".btn-add-to-basket"
             )
