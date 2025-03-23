@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 # pytest -s -v test_fixture7.py
 # -v - выводит отчет более подробно
 # -s - показывает в консоли выводы print'ов.
-
+# --tb=line -  указывает, что нужно выводить только одну строку из лога каждого упавшего теста
 
 
 # Использую Constest.py
