@@ -6,9 +6,6 @@ class MainPageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
-##TODO  СДЕЛАТЬ ПРОВЕРКУ НА ФОРМУ ЛОГИНА А НЕ НА ПОЛЯ И КНОПКИ
-
-
 class LoginPageLocators:
 
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
@@ -22,3 +19,14 @@ class LoginPageLocators:
     REGISTER_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password1")
     REGISTER_CONFIRM_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password2")
     REGISTER_BUTTON = (By.CSS_SELECTOR, "button[name='registration_submit']")
+
+
+class ProductPageLocators:
+
+    PRODUCT_NAME = (By.CSS_SELECTOR, "div[class='col-sm-6 product_main'] h1")
+    PRODUCT_PRICE = (By.CSS_SELECTOR, "div[class='col-sm-6 product_main'] p[class ='price_color']")
+    ADD_TO_BUSKET_BUTTOM = (By.CSS_SELECTOR, ".btn-add-to-basket")
+    PRODUCT_NAME_WICH_ADDED_TO_BUSKET_SUCCESFULLY = (By.XPATH, 
+    '//div[@class="alertinner "][contains(., " has been added to your basket.")]')
+    PRODUCT_PRICE_AFTER_ADD_TO_BUSKET= (By.XPATH, 
+    '//div[@class="alertinner "][contains(., "View basket")]')
