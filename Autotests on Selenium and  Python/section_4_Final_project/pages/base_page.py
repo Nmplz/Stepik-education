@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 import math
+from .locators import BasePageLocators
 
 
 class BasePage:
@@ -15,6 +16,15 @@ class BasePage:
 
     def open(self):
         self.browser.get(self.url)
+
+    def go_to_login_page(self):
+        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
+        link.click()
+
+    def go_to_basket_page(self):
+        link = self.browser.find_element(*BasePageLocators.BUSKET_LINK)
+        link.click()
+
 
     # How- как искать (css, id, xpath и тд)
     # What-  собственно что искать (строку-селектор).
@@ -73,3 +83,9 @@ class BasePage:
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+
+
+    def should_be_login_link(self):
+        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+    
