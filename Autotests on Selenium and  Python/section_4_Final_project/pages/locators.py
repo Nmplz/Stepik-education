@@ -28,3 +28,4 @@ class ProductPageLocators:
     ADD_TO_BUSKET_BUTTOM = (By.CSS_SELECTOR, ".btn-add-to-basket")
     PRODUCT_NAME_WICH_ADDED_TO_BUSKET_SUCCESFULLY = (By.XPATH, '(//div[@class="alertinner "]//strong)[1]')
     PRODUCT_PRICE_AFTER_ADD_TO_BUSKET = (By.XPATH, '(//div[@class="alertinner "]//strong)[3]')
+    PRODUCT_SUCCESS_MESSAGE = (By.XPATH, '//div[@class="alertinner "][contains(., "has been added to your basket")]')

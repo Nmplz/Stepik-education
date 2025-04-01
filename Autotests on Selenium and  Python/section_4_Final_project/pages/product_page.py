@@ -26,3 +26,11 @@ class ProductPage(BasePage):
         book_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
         added_book_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE_AFTER_ADD_TO_BUSKET).text
         assert book_price == added_book_price, f"Expected book price >{book_price}<. But we got >{added_book_price}<"
+
+    def should_not_be_success_message(self):
+        #проверяет отсутствие сообщения об успехе на странице на данный момент
+        assert self.is_not_element_present(*ProductPageLocators.PRODUCT_SUCCESS_MESSAGE), "Success message shouldn't appear"
+
+    def should_dissapear_of_success_message (self):
+         # проверяет, что сообщение исчезает.
+        assert self.is_disappeared(*ProductPageLocators.PRODUCT_SUCCESS_MESSAGE),"Success message DO NOT  dissappear after 4 sec"
