@@ -20,9 +20,9 @@ class ProductPage(BasePage):
     def added_good_name_check(self):
         book_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
         added_book_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME_WICH_ADDED_TO_BUSKET_SUCCESFULLY).text
-        assert book_name in added_book_name, f"Expected book name -{book_name}. But we got {added_book_name}"
+        assert book_name == added_book_name, f"Expected book name -{book_name}. But we got {added_book_name}"
 
     def added_good_price_check(self):
         book_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
         added_book_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE_AFTER_ADD_TO_BUSKET).text
-        assert book_price in added_book_price, f"Expected book price -{book_price}. But we got {added_book_price}"
+        assert book_price == added_book_price, f"Expected book price >{book_price}<. But we got >{added_book_price}<"

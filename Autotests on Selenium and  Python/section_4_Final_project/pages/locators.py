@@ -26,7 +26,5 @@ class ProductPageLocators:
     PRODUCT_NAME = (By.CSS_SELECTOR, "div[class='col-sm-6 product_main'] h1")
     PRODUCT_PRICE = (By.CSS_SELECTOR, "div[class='col-sm-6 product_main'] p[class ='price_color']")
     ADD_TO_BUSKET_BUTTOM = (By.CSS_SELECTOR, ".btn-add-to-basket")
-    PRODUCT_NAME_WICH_ADDED_TO_BUSKET_SUCCESFULLY = (By.XPATH, 
-    '//div[@class="alertinner "][contains(., " has been added to your basket.")]')
-    PRODUCT_PRICE_AFTER_ADD_TO_BUSKET= (By.XPATH, 
-    '//div[@class="alertinner "][contains(., "View basket")]')
+    PRODUCT_NAME_WICH_ADDED_TO_BUSKET_SUCCESFULLY = (By.XPATH, '(//div[@class="alertinner "]//strong)[1]')
+    PRODUCT_PRICE_AFTER_ADD_TO_BUSKET = (By.XPATH, '(//div[@class="alertinner "]//strong)[3]')
