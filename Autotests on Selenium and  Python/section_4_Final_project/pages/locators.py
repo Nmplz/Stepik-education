@@ -12,6 +12,11 @@ class BasePageLocators:
     BUSKET_LINK = (By.CSS_SELECTOR, 'a[href="/en-gb/basket/"]')
 
 
+class BusketLocators:
+    BUSKET_EMPTY = (By.XPATH, '(//div[@class="content_inner "]//p)[1]')  # ПЕРЕДЕЛАТЬ ЛОКАТОР
+    BUSKET_SUMMARY = (By.CSS_SELECTOR, "form[class='basket_summary']")
+
+
 class LoginPageLocators:
 
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
