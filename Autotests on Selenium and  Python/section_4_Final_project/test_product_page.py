@@ -4,6 +4,7 @@ from .pages.main_page import MainPage
 from .pages.login_page import LoginPage
 from .pages.product_page import ProductPage
 from .pages.basket_page import BasketPage
+import time
 
 """
     Переход на страницу.
@@ -68,7 +69,6 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
     page.go_to_login_page()
 
 
-@pytest.mark.new
 def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     link = "http://selenium1py.pythonanywhere.com/en-gb/"
 
@@ -79,3 +79,32 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     busket_page.busket_not_empty_on_first_logon()
     busket_page.is_busket_empty()
 
+
+@pytest.mark.register_user
+class TestUserAddToBasketFromProductPage:
+
+    @pytest.fixture(scope="function", autouse=True)
+    def setup(self, browser):
+        link = "http://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
+        page = LoginPage(browser, link)
+        page.open()
+        email = str(time.time()) + "@fakemail.org"
+        page.register_new_user(email, "Adminkit1")
+        page.is_user_registred()
+
+    def test_user_cant_see_success_message(self, browser):
+        link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
+        page = ProductPage(browser, link, 0)
+        page.open()
+        page.should_not_be_success_message()
+
+    def test_user_can_add_product_to_basket(self, browser):
+        link = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer1"
+
+        page = ProductPage(browser, link)
+        page.open()
+        page.should_be_add_to_busket_button()
+        page.add_good_to_busket()
+        page.solve_quiz_and_get_code()
+        page.added_good_name_check()
+        page.added_good_price_check()

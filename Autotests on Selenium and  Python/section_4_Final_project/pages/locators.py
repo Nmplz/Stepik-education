@@ -10,6 +10,7 @@ class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     BUSKET_LINK = (By.CSS_SELECTOR, 'a[href="/en-gb/basket/"]')
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
 class BusketLocators:
@@ -30,6 +31,7 @@ class LoginPageLocators:
     REGISTER_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password1")
     REGISTER_CONFIRM_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password2")
     REGISTER_BUTTON = (By.CSS_SELECTOR, "button[name='registration_submit']")
+    SUCCESS_REGISTER_MESSAGE = (By.CSS_SELECTOR, 'div[class="alertinner wicon"]')
 
 
 class ProductPageLocators:
