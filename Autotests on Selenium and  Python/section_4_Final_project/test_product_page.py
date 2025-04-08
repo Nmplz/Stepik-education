@@ -79,8 +79,3 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     busket_page.busket_not_empty_on_first_logon()
     busket_page.is_busket_empty()
 
-
-# Гость открывает главную страницу
-# Переходит в корзину по кнопке в шапке сайта
-# Ожидаем, что в корзине нет товаров
-# Ожидаем, что есть текст о том что корзина пуста
