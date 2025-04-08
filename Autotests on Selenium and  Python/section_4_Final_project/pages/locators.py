@@ -13,7 +13,7 @@ class BasePageLocators:
 
 
 class BusketLocators:
-    BUSKET_EMPTY = (By.XPATH, '(//div[@class="content_inner "]//p)[1]')  # ПЕРЕДЕЛАТЬ ЛОКАТОР
+    BUSKET_EMPTY = (By.CSS_SELECTOR, 'div[id="content_inner"] p')
     BUSKET_SUMMARY = (By.CSS_SELECTOR, "form[class='basket_summary']")
 
 
